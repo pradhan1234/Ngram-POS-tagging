@@ -1,0 +1,102 @@
+Output of sample run of Bigram Probabilities:
+
+
+Total Words in Corpus:  29326
+Unique Tokens: 5606
+Total non-zero unique bigrams:  18124
+Non zero bigram counts: 29325
+
+Demo code, testing
+Word1: to
+Word2: control
+
+No Smoothing:
+C(to,control): 1
+P(control|to): 0.0015408320493066256
+
+
+Add one smoothed count: 2
+C*(to,control): 0.20751398880895283
+P*(control|to): 0.000319744204636291
+
+
+Good Turing
+C*(to,control): 0.21753783122976278
+P*(control|to): 7.418169862907512e-06
+
+
+Start of writing models to the file
+End of writing models to the file
+
+
+
+Computing probability of given sentence:
+
+Sentence:
+['The', 'president', 'wants', 'to', 'control', 'the', 'board', "'s", 'control']
+
+
+No Smoothing:
+P(president|The) = 0
+P(wants|president) = 0
+P(to|wants) = 0.5
+P(control|to) = 0.0015408320493066256
+P(the|control) = 0
+P(board|the) = 0.1006993006993007
+P('s|board) = 0.04644808743169399
+P(control|'s) = 0
+No Smoothing: 0.0
+
+
+Add One:
+P(president|The) = 0.0001736714136853074
+P(wants|president) = 0.00017556179775280898
+P(to|wants) = 0.0005347593582887701
+P(control|to) = 0.000319744204636291
+P(the|control) = 0.0001779676098949991
+P(board|the) = 0.02060830017055145
+P('s|board) = 0.003014065639651708
+P(control|'s) = 0.00016691704223001168
+Add One: 9.619576655357422e-27
+
+
+Good Turing Discounting:
+P(president|The) = 0.5160443307757886
+P(wants|president) = 0.5160443307757886
+P(to|wants) = 3.424561752430911e-05
+P(control|to) = 7.418169862907512e-06
+P(the|control) = 0.5160443307757886
+P(board|the) = 0.0
+P('s|board) = 0.00046035805626598467
+P(control|'s) = 0.5160443307757886
+Good Turing: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Output of Brill's Transformation base Tagging
+
+Prev Tag 		 From Tag 		 To Tag 		 Score
+MD		NN		VB		45
+TO		NN		VB		27
+DT		VB		NN		17
+IN		VB		NN		12
+JJ		VB		NN		10
+NN		VB		NN		8
+CD		VB		NN		2
+
+
+Output of Naive Bayes:
+
+Model written to file
